@@ -1,0 +1,90 @@
+# =================================================================
+# ELOCATE PROJECT GITIGNORE - COMPREHENSIVE VERSION
+# See https://help.github.com/articles/ignoring-files/ for more info
+# =================================================================
+
+# DEPENDENCIES & PACKAGE MANAGERS
+/node_modules
+/.pnp
+.pnp.js
+.yarn/install-state.gz
+package-lock.json
+yarn.lock
+npm-shrinkwrap.json
+
+# PROJECT SPECIFIC
+demo.tsx
+/server
+
+# TESTING & COVERAGE
+/coverage
+.nyc_output
+*.lcov
+
+# NEXT.JS SPECIFIC
+/.next/
+/out/
+next-env.d.ts
+
+# PRODUCTION BUILDS
+/build
+/dist
+/public/sw.js
+/public/workbox-*.js
+
+# ENVIRONMENT VARIABLES
+.env
+.env.*
+.env.local
+.env.development
+.env.test
+.env.production
+!.env.example
+
+# LOGS & DEBUG FILES
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+logs/
+debug.log
+
+# IDE & EDITOR CONFIGS
+.idea/
+.vscode/
+*.sublime-*
+*.swp
+*.swo
+.project
+.classpath
+.settings/
+.vscode-test
+
+# CACHE & TEMP FILES
+.cache/
+.eslintcache
+.stylelintcache
+.parcel-cache
+.next-cache/
+.vercel
+tmp/
+temp/
+
+# OS GENERATED FILES
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.directory
+Desktop.ini
+
+# TYPESCRIPT SPECIFIC
+*.tsbuildinfo
+tsconfig.tsbuildinfo
+
+# MISCELLANEOUS
+*.pem
+.history
+.ionide

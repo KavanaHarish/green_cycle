@@ -86,7 +86,7 @@ const user = getUser();
 
   return (
     <header className={`header ${isHeaderActive ? "active" : ""}`} data-header>
-      <div className="container shadow-md">
+        <div className="container bg-[#182B20] shadow-md">
         <Link href="/">
           <Image
             src={logo}
@@ -98,9 +98,9 @@ const user = getUser();
         </Link>
 
         <nav className={`navbar ${isNavbarActive ? "active" : ""}`} data-navbar>
-          <div className="wrapper">
+          <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
             <Link href="/" className="logo">
-              GreenCycle
+              
             </Link>
             <button
               className="nav-close-btn"
@@ -114,7 +114,7 @@ const user = getUser();
               ></IonIcon>
             </button>
           </div>
-
+        
           <ul className="navbar-list">
             <NavItem label="Home" />
             <NavItem label="About" />

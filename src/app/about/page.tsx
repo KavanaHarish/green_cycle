@@ -5,7 +5,7 @@ import About from "./About";
 
 const Page = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-green-50 to-white dark:from-gray-900 dark:to-black px-4">
+    <div className="min-h-screen bg-gradient-to-b from-green-50 via-green-100 to-green-200 dark:from-gray-900 dark:via-gray-950 dark:to-black px-4">
       <motion.div
         initial={{ opacity: 0, y: 25 }}
         animate={{ opacity: 1, y: 0 }}
@@ -14,10 +14,10 @@ const Page = () => {
       >
         {/* Page Header */}
         <div className="text-center mt-16 md:mt-24">
-          <h1 className="text-4xl md:text-5xl font-extrabold text-green-700 tracking-tight">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-green-700 dark:text-green-400 tracking-tight">
             Green Cycle
           </h1>
-          <p className="mt-3 text-gray-600 md:text-lg">
+          <p className="mt-3 text-gray-600 dark:text-gray-300 md:text-lg">
             Sustainable. Smart. Eco-friendly.
           </p>
         </div>

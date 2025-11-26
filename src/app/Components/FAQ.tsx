@@ -1,90 +1,98 @@
 "use client";
 import React, { useState } from "react";
-import { Container, Row, Col } from "reactstrap";
 import { RiArrowDropDownLine, RiArrowDropUpLine } from "react-icons/ri";
 
 const FAQ = () => {
-    const faqData = [
-        {
-          question: "How does GreenCycle help me find e-waste recycling facilities?",
-          answer:
-            "GreenCycle's intelligent facility locator uses geolocation technology to instantly identify certified e-waste recycling centers nearest to you. Simply access our interactive map interface, enter your location, and discover detailed information about each facility including operational hours, accepted materials, certification status, and user ratings—all designed to make responsible e-waste disposal effortless and convenient.",
-        },
-        {
-          question: "How does GreenCycle verify the facilities listed on the platform?",
-          answer:
-            "We implement a rigorous multi-step verification process for all facilities on our platform. Each facility undergoes credential validation, certification verification, operational compliance checks, and ongoing monitoring. We also incorporate user feedback and regular audits to maintain the highest standards of accuracy and reliability—ensuring you can trust every facility recommendation we provide.",
-        },
-        {
-          question: "Can I schedule the pickup and recycling of my e-waste through GreenCycle?",
-          answer:
-            "Absolutely! Our streamlined booking system allows you to schedule e-waste pickups with just a few clicks. Select your preferred facility, choose from available time slots, specify the type and quantity of e-waste, and receive immediate confirmation. Many of our partner facilities also offer special incentives for GreenCycle users, making responsible recycling not just convenient but rewarding as well.",
-        },
-        {
-          question: "What kind of educational resources does GreenCycle offer?",
-          answer:
-            "GreenCycle features a comprehensive knowledge hub with expert-curated content including in-depth articles, video tutorials, infographics, and case studies. Our educational resources cover topics ranging from the environmental impact of e-waste to best practices in electronics lifecycle management, emerging recycling technologies, and regulatory compliance. We regularly update our content to reflect the latest research and innovations in sustainable e-waste management.",
-        },
-        {
-          question: "How can I stay updated on changing e-waste regulations and compliance requirements?",
-          answer:
-            "Our dedicated regulatory center maintains a real-time database of local, national, and international e-waste regulations. Subscribers receive customized compliance alerts based on their location and business needs. Our platform also provides simplified explanations of complex regulatory frameworks, practical compliance guides, and access to compliance certification pathways—turning regulatory complexity into actionable insights.",
-        },
-        {
-          question: "What additional benefits do I get by subscribing to the GreenCycle newsletter?",
-          answer:
-            "Our newsletter subscribers gain exclusive access to premium content including expert interviews, early notification of recycling events, special recycling incentive programs, and industry trend analyses. You'll also receive personalized recycling recommendations, invitations to virtual and in-person sustainability workshops, and opportunities to connect with our growing community of environmentally conscious individuals and organizations. Join thousands of subscribers already benefiting from our curated insights.",
-        },
-      ];
-      
+  const faqData = [
+    {
+      question: "How does GreenCycle help me find e-waste recycling facilities?",
+      answer:
+        "GreenCycle's intelligent facility locator uses geolocation technology to instantly identify certified e-waste recycling centers nearest to you.",
+    },
+    {
+      question: "How does GreenCycle verify facilities listed on the platform?",
+      answer:
+        "We implement a rigorous multi-step verification process including certification checks, operational audits and performance validation.",
+    },
+    {
+      question: "Can I schedule e-waste pickup through GreenCycle?",
+      answer:
+        "Yes! You can schedule pickup easily by selecting a preferred certified facility and time slot.",
+    },
+    {
+      question: "What educational resources does GreenCycle offer?",
+      answer:
+        "We provide articles, videos, tutorials, guides and research-based updates on sustainable e-waste practices.",
+    },
+    {
+      question: "How do I stay updated on e-waste regulations?",
+      answer:
+        "Our regulatory center provides simplified compliance updates and region-specific alerts.",
+    },
+    {
+      question: "What benefits do newsletter subscribers get?",
+      answer:
+        "Exclusive insights, early updates, green incentives, event invites and more.",
+    },
+  ];
 
-  const [activeQuestion, setActiveQuestion] = useState(null);
+  const [active, setActive] = useState<number | null>(null);
 
-  const toggleQuestion = (index: any) => {
-    if (activeQuestion === index) {
-      setActiveQuestion(null);
-    } else {
-      setActiveQuestion(index);
-    }
+  const toggle = (i: number) => {
+    setActive(active === i ? null : i);
   };
 
   return (
-    <section className="md:mb-40">
-      <Container >
-        <Row>
-          <Col>
-            <h2 className="text-center text-3xl font-bold mb-2">Frequently Asked Questions</h2>
-            <p className="text-center text-gray-600 mb-8">Everything you need to know about GreenCycle and responsible e-waste management</p>
-            <div className="mt-8">
-              {faqData.map((item, index) => (
-                <div
-                  className={`mb-6 p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 cursor-pointer ${
-                    activeQuestion === index ? "bg-gray-50 active" : ""
-                  }`}
-                  key={index}
-                  onClick={() => toggleQuestion(index)}
-                >
-                  <div className="flex items-center justify-between text-center gap-12">
-                    <h4 className="text-2xl font-bold">
-                      {item.question}
-                      <span className="text-xl font-semibold ">
-                        {activeQuestion === index ? (
-                          <RiArrowDropUpLine />
-                        ) : (
-                          <RiArrowDropDownLine />
-                        )}
-                      </span>
-                    </h4>
-                  </div>
-                  {activeQuestion === index && (
-                    <p className="text-xl mt-4 leading-relaxed">{item.answer}</p>
-                  )}
-                </div>
-              ))}
+    <section className="py-24 bg-transparent">
+      <div className="max-w-6xl mx-auto px-6">
+
+        {/* Heading */}
+        <h2 className="text-center text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-4">
+          Frequently Asked Questions
+        </h2>
+        <p className="text-center text-gray-600 dark:text-gray-300 mb-12 text-lg">
+          Everything you need to know about GreenCycle
+        </p>
+
+        {/* FAQ Cards */}
+        <div className="space-y-6">
+          {faqData.map((item, index) => (
+            <div
+              key={index}
+              onClick={() => toggle(index)}
+              className={`
+                group cursor-pointer rounded-xl p-6 border transition-all duration-300 
+                hover:-translate-y-1 hover:shadow-green-200
+                ${active === index
+                  ? "bg-white dark:bg-gray-800 border-green-600 shadow-lg"
+                  : "bg-transparent border-gray-300 dark:border-gray-700"
+                }
+              `}
+            >
+              <div className="flex items-center justify-between">
+                <h4 className="text-xl md:text-2xl font-semibold text-gray-900 dark:text-white">
+                  {item.question}
+                </h4>
+                <span className="text-4xl text-green-600 dark:text-green-400">
+                  {active === index ? <RiArrowDropUpLine /> : <RiArrowDropDownLine />}
+                </span>
+              </div>
+
+              <div
+                className={`
+                  overflow-hidden transition-all duration-500 
+                  ${active === index ? "max-h-[500px] mt-4" : "max-h-0"}
+                `}
+              >
+                <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
+                  {item.answer}
+                </p>
+              </div>
             </div>
-          </Col>
-        </Row>
-      </Container>
+          ))}
+        </div>
+
+      </div>
     </section>
   );
 };

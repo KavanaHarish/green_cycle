@@ -409,20 +409,26 @@ const FacilityMap: React.FC = () => {
               </p>
             </div>
             
-            <div className="mb-6 flex flex-wrap gap-4 justify-center">
-              <div className="bg-white p-3 rounded-lg shadow-sm flex items-center">
-                <span className="w-4 h-4 rounded-full bg-green-500 mr-2"></span>
-                <span className="text-gray-700">Verified Facility</span>
+            <div className="mb-10 flex flex-wrap gap-6 justify-center">
+              {/* Verified */}
+              <div className="px-6 py-3 rounded-xl bg-white/5 backdrop-blur-lg border border-emerald-400/30 shadow-[0_0_20px_rgba(16,185,129,0.25)] flex items-center gap-3 hover:scale-105 transition-all duration-300">
+                <span className="w-4 h-4 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span className="text-emerald-300 font-semibold tracking-wide">Verified Facility</span>
               </div>
-              <div className="bg-white p-3 rounded-lg shadow-sm flex items-center">
-                <span className="w-4 h-4 rounded-full bg-orange-500 mr-2"></span>
-                <span className="text-gray-700">Unverified Facility</span>
+
+              {/* Unverified */}
+              <div className="px-6 py-3 rounded-xl bg-white/5 backdrop-blur-lg border border-orange-400/30 shadow-[0_0_20px_rgba(249,115,22,0.25)] flex items-center gap-3 hover:scale-105 transition-all duration-300">
+                <span className="w-4 h-4 rounded-full bg-orange-400"></span>
+                <span className="text-orange-300 font-semibold tracking-wide">Unverified Facility</span>
               </div>
-              <div className="bg-white p-3 rounded-lg shadow-sm flex items-center">
-                <span className="w-4 h-4 rounded-full bg-blue-500 mr-2"></span>
-                <span className="text-gray-700">Your Location</span>
+
+              {/* Your Location */}
+              <div className="px-6 py-3 rounded-xl bg-white/5 backdrop-blur-lg border border-sky-400/30 shadow-[0_0_20px_rgba(56,189,248,0.25)] flex items-center gap-3 hover:scale-105 transition-all duration-300">
+                <span className="w-4 h-4 rounded-full bg-emerald-400"></span>
+                <span className="text-sky-300 font-semibold tracking-wide">Your Location</span>
               </div>
             </div>
+
             
             <div className="flex flex-col lg:flex-row gap-6">
               <div className="lg:w-1/3 flex flex-col">
@@ -524,7 +530,7 @@ const FacilityMap: React.FC = () => {
                       </div>
                     ))
                   ) : (
-                    <div className="p-8 text-center text-gray-600">
+                    <div className="p-8 text-center text-gray-500">
                       No facilities match your current filters. Try adjusting your search criteria.
                     </div>
                   )}

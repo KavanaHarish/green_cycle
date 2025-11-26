@@ -1,290 +1,145 @@
 "use client";
 import React, { useState } from "react";
-import { IonIcon } from "@ionic/react";
-import { paperPlane } from "ionicons/icons";
-import { location } from "ionicons/icons";
-import { call } from "ionicons/icons";
-import { mail } from "ionicons/icons";
-import { logoLinkedin } from "ionicons/icons";
-import { logoTwitter } from "ionicons/icons";
-import { logoInstagram } from "ionicons/icons";
-import { logoWhatsapp } from "ionicons/icons";
-import logo from "../../assets/ELocate-s.png";
 import Link from "next/link";
 import Image from "next/image";
+import { IonIcon } from "@ionic/react";
+import { location, call, mail, paperPlane } from "ionicons/icons";
+import logo from "../../assets/ELocate-s.png";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Footer = () => {
-  const [formData, setFormData] = useState({
-    email: "",
-  });
+  const [formData, setFormData] = useState({ email: "" });
 
-  const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    } as Pick<typeof formData, keyof typeof formData>);
-    ;
+  const handleInputChange = (e: any) => {
+    setFormData({ email: e.target.value });
   };
 
-  const SendMsg = (e: React.FormEvent) => {
+  const SendMsg = (e: any) => {
     e.preventDefault();
-    const templateParams = {
-      email: formData.email,
-    };
-
     emailjs
       .send(
         "service_jqn5flv",
         "template_ppph1w9",
-        templateParams,
+        { email: formData.email },
         "ddYcz13MvW01UFF5u"
       )
-      .then((result: { text: any }) => {
-        setFormData({
-          email: "",
-        });
-        toast.success("Subscription Confirmed! Welcome to the GreenCycle community.");
+      .then(() => {
+        toast.success("Subscribed successfully!");
+        setFormData({ email: "" });
       })
-      .catch((error: { text: any }) => {
-        toast.error("Unable to process your request. Please try again.");
-      });
+      .catch(() => toast.error("Subscription failed!"));
   };
+
   return (
-    <footer className="footer projects shadow-2xl">
-      <div className="footer-top md:section">
-      <ToastContainer
-        className="text-2xl"
-        position="top-right"
-        autoClose={3000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="dark"
-      />
-        <div className="container">
-          <div className="footer-brand">
-            <Link href="/">
-              <Image
-                src={logo}
-                alt="GreenCycle - E-waste Facility Locator"
-                width={100}
-                height={100}
-                className="logo mx-auto md:mx-0"
-              />
-            </Link>
-            <p className="footer-text">
-              GreenCycle: Revolutionizing e-waste management through technological innovation. Our platform connects you with certified recycling facilities, empowering your journey toward environmental responsibility and sustainable electronics disposal.
-            </p>
-            <form onSubmit={SendMsg} className="newsletter-form mb-0 md:mb-4">
-              <input
-                type="email"
-                name="email"
-                placeholder="Join our sustainability newsletter"
-                className="email-field"
-                value={formData.email}
-                onChange={handleInputChange}
-                required
-              />
-              <button
-                type="submit"
-                className="form-btn"
-                aria-label="Subscribe to our newsletter"
-              >
-                <IonIcon icon={paperPlane} aria-hidden="true"></IonIcon>
-              </button>
-            </form>
-          </div>
-          <ul className="footer-list">
-            <li>
-              <p className="footer-list-title">Recycling Solutions</p>
-            </li>
-            <li>
-              <Link href="/recycle/smartphone" className="footer-link">
-                Smartphone Recycling
-              </Link>
-            </li>
-            <li>
-              <Link href="/recycle/laptop" className="footer-link">
-                Laptop & Computer Recycling
-              </Link>
-            </li>
-            <li>
-              <Link href="/recycle/accessories" className="footer-link">
-              Electronics Accessories
-              </Link>
-            </li>
+    <footer className="bg-[#0f1a12] text-gray-300 pt-20 pb-10 mt-20 border-t border-green-900/40">
+      <ToastContainer position="top-right" theme="dark" />
 
-            <li>
-              <Link href="/recycle/tv" className="footer-link">
-                Television & Display Recycling
-              </Link>
-            </li>
+      <div className="max-w-7xl mx-auto px-2 grid grid-cols-1 md:grid-cols-4 gap-12">
 
-            <li>
-              <Link href="/recycle/refrigerator" className="footer-link">
-              Refrigerator & Cooling Appliances
-              </Link>
-            </li>
+        {/* Brand Section */}
+        <div>
+          <Image src={logo} alt="GreenCycle" width={120} className="mb-6" />
+          <p className="text-gray-400 leading-relaxed">
+            GreenCycle helps users locate certified recycling facilities and promotes
+            sustainable e-waste management through technology and awareness.
+          </p>
 
-            <li>
-            <Link href="/recycle/washing-machine" className="footer-link">
-                Household Appliance Recycling
-              </Link>
-            </li>
+          {/* Newsletter */}
+          <form
+            onSubmit={SendMsg}
+            className="mt-6 flex bg-[#1a2b20] border border-green-800/40 rounded-xl overflow-hidden"
+          >
+            <input
+              type="email"
+              name="email"
+              placeholder="Subscribe to newsletter"
+              className="flex-grow px-4 py-3 bg-transparent text-gray-200 placeholder-gray-500 outline-none"
+              value={formData.email}
+              onChange={handleInputChange}
+              required
+            />
+            <button className="px-5 bg-green-600 hover:bg-green-700 transition-colors flex items-center">
+              <IonIcon icon={paperPlane} className="w-6 h-6 text-white" />
+            </button>
+          </form>
+        </div>
 
-          
+        {/* Recycling Solutions */}
+        <div>
+          <h3 className="text-lg font-semibold text-green-400 mb-4">
+            Recycling Solutions
+          </h3>
+          <ul className="space-y-3">
+            <li><Link href="/recycle/smartphone" className="hover:text-green-400">Smartphones</Link></li>
+            <li><Link href="/recycle/laptop" className="hover:text-green-400">Laptops & Computers</Link></li>
+            <li><Link href="/recycle/accessories" className="hover:text-green-400">Accessories & Gadgets</Link></li>
+            <li><Link href="/recycle/tv" className="hover:text-green-400">Televisions & Displays</Link></li>
+            <li><Link href="/recycle/refrigerator" className="hover:text-green-400">Cooling Appliances</Link></li>
+            <li><Link href="/recycle/washing-machine" className="hover:text-green-400">Household Appliances</Link></li>
           </ul>
-          <ul className="footer-list">
-            <li>
-              <p className="footer-list-title">GreenCycle Platform</p>
-            </li>
-            <li>
-              <Link href="/aboutus" className="footer-link">
-                Our Mission & Vision
-              </Link>
-            </li>
+        </div>
 
-            <li>
-              <Link href="/education" className="footer-link">
-                E-Waste Education Center
-              </Link>
-            </li>
-
-            <li>
-              <Link href="/facilities" className="footer-link">
-                Certified Recycling Network
-              </Link>
-            </li>
-
-            <li>
-              <Link href="/news" className="footer-link">
-                Sustainability News
-              </Link>
-            </li>
-
-            <li>
-              <Link href="/contactus" className="footer-link">
-                Get In Touch
-              </Link>
-            </li>
-            <li>
-              <Link href="/blogs" className="footer-link">
-                Insights & Resources
-              </Link>
-            </li>
+        {/* Platform Info */}
+        <div>
+          <h3 className="text-lg font-semibold text-green-400 mb-4">
+            GreenCycle Platform
+          </h3>
+          <ul className="space-y-3">
+            <li><Link href="/aboutus" className="hover:text-green-400">About Us</Link></li>
+            <li><Link href="/education" className="hover:text-green-400">Education Hub</Link></li>
+            <li><Link href="/facilities" className="hover:text-green-400">Recycling Facilities</Link></li>
+            <li><Link href="/news" className="hover:text-green-400">News & Updates</Link></li>
+            <li><Link href="/contactus" className="hover:text-green-400">Contact</Link></li>
+            <li><Link href="/blogs" className="hover:text-green-400">Insights & Articles</Link></li>
           </ul>
-          <ul className="footer-list">
-            <li>
-              <p className="footer-list-title">Connect With Us</p>
+        </div>
+
+        {/* Contact */}
+        <div>
+          <h3 className="text-lg font-semibold text-green-400 mb-4">
+            Contact Us
+          </h3>
+
+          <ul className="space-y-4">
+
+            <li className="flex gap-3 items-start">
+              <IonIcon icon={location} className="text-green-400 w-6 h-6" />
+              <span>Chh. Sambhajinagar, Maharashtra, India</span>
             </li>
-            <li className="footer-item">
-              <IonIcon icon={location} aria-hidden="true" className="w-8 h-8 mt-4"></IonIcon>
-              <address className="contact-link address">
-                Chh.Sambhajinagar,<br />Maharashtra, India 431001
-              </address>
-            </li>
-            <li className="footer-item">
-              <IonIcon icon={call} aria-hidden="true"></IonIcon>
-              <Link
-                target="_blank"
-                rel="noopener noreferrer"
-                href="tel:+911234567890"
-                className="contact-link"
-              >
+
+            <li className="flex gap-3 items-center">
+              <IonIcon icon={call} className="text-green-400 w-6 h-6" />
+              <Link href="tel:+911234567890" className="hover:text-green-400">
                 +91 123 456 7890
               </Link>
             </li>
-            <li className="footer-item">
-              <IonIcon icon={mail} aria-hidden="true"></IonIcon>
-              <Link
-                target="_blank"
-                rel="noopener noreferrer"
-                href="mailto:contact@elocate.com"
-                className="contact-link"
-              >
-                contact@elocate.com
+
+            <li className="flex gap-3 items-center">
+              <IonIcon icon={mail} className="text-green-400 w-6 h-6" />
+              <Link href="mailto:contact@greencycle.com" className="hover:text-green-400">
+                contact@greencycle.com
               </Link>
             </li>
-            <li className="footer-item">
-              <ul className="social-list mb-4 md:mb-0">
-                <li>
-                  <Link
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="#"
-                    aria-label="Connect with GreenCycle on LinkedIn"
-                    className="social-link"
-                  >
-                    <IonIcon icon={logoLinkedin}></IonIcon>
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="#"
-                    aria-label="Follow GreenCycle on Instagram"
-                    className="social-link"
-                  >
-                    <IonIcon icon={logoInstagram}></IonIcon>
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="#"
-                    aria-label="Follow GreenCycle on Twitter"
-                    className="social-link"
-                  >
-                    <IonIcon icon={logoTwitter}></IonIcon>
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="#"
-                    aria-label="Contact GreenCycle on WhatsApp"
-                    className="social-link"
-                  >
-                    <IonIcon icon={logoWhatsapp}></IonIcon>
-                  </Link>
-                </li>
-              </ul>
-            </li>
+
           </ul>
         </div>
       </div>
-      <div className="footer-bottom">
-        <div className="container">
-        <p className="copyright">
-            &copy; 2023 GreenCycle | All Rights Reserved by{" "}
-            <Link href="#" className="copyright-link">
-              Team Spam Byte
-            </Link>
-          </p>
-          <ul className="footer-bottom-list">
-            <li>
-              <Link href="/privacypolicy" className="footer-bottom-link">
-                Privacy Policy
-              </Link>
-            </li>
-            <li>
-              <Link href="/termsandservices" className="footer-bottom-link">
-                Terms of Service
-              </Link>
-            </li>
-          </ul>
+
+      {/* Footer Bottom */}
+      <div className="mt-14 pt-6 border-t border-green-900/50 text-center">
+        <p className="text-2xl text-gray-500">
+          &copy; 2024 GreenCycle • Built by <span className="text-green-400">Team Spam Byte</span>
+        </p>
+
+        <div className="mt-3 flex justify-center gap-4 text-xl text-gray-400">
+          <Link href="/privacypolicy" className="hover:text-green-400">
+            Privacy Policy
+          </Link>|
+          <Link href="/termsandservices" className="hover:text-green-400">
+            Terms of Service
+          </Link>
         </div>
       </div>
     </footer>

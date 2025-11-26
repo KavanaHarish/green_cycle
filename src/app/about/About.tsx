@@ -1,77 +1,67 @@
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import feature from "../../assets/features/banner.svg";
 
 const About = () => {
   return (
-    <section
-      id="features"
-      className="py-20 bg-gradient-to-b from-green-50/60 to-white dark:from-gray-900 dark:to-black"
-    >
-      <div className="container mx-auto px-6">
+    <section id="about" className="py-24">
+      <div className="max-w-6xl mx-auto px-6 text-center">
+        
         {/* Subtitle */}
-        <p className="text-center text-green-600 font-semibold tracking-wide">
+        <p className="text-green-600 font-semibold tracking-wide mb-2">
           — Discover GreenCycle —
         </p>
 
         {/* Title */}
-        <h2 className="text-center text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mt-2 leading-tight">
-          Pioneering the Future of E-Waste Management & Sustainability
+        <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white leading-tight">
+          Pioneering the Future of
+          <br />
+          <span className="text-green-700 dark:text-green-400">
+            E-Waste Management & Sustainability
+          </span>
         </h2>
 
-        {/* Main grid */}
-        <div className="mt-14 flex flex-col md:flex-row items-center gap-12">
+        {/* Description */}
+        <p className="mt-10 text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed max-w-4xl mx-auto">
+          India generates over{" "}
+          <span className="font-semibold text-green-600">
+            1.71 million metric tons of e-waste
+          </span>{" "}
+          annually — much of it improperly disposed.  
+          Limited awareness and lack of trusted recycling facilities worsen the crisis.
+          <br /><br />
+          <span className="font-semibold text-green-700 dark:text-green-400">
+            GreenCycle
+          </span>{" "}
+          bridges this critical gap by connecting citizens with verified
+          e-waste facilities, simplifying responsible recycling and
+          empowering communities to create a cleaner, greener future.
+        </p>
+
+        {/* Buttons */}
+        <div className="mt-10 flex flex-col sm:flex-row justify-center gap-5">
           
-          {/* Left Text */}
-          <div className="md:w-1/2 space-y-6">
-            <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
-              India faces a critical environmental challenge with{" "}
-              <span className="font-semibold text-green-600">
-                1.71 million metric tons of e-waste
-              </span>{" "}
-              generated annually, much of it improperly disposed. The scarcity 
-              of accessible, trustworthy e-waste collection facilities intensifies 
-              this growing crisis.
-              <br /><br />
-              <span className="font-semibold text-green-700 dark:text-green-400">
-                GreenCycle
-              </span>{" "}
-              was born from this urgent need. Our award-winning platform bridges 
-              the gap between consumers and certified e-waste facilities through 
-              an intuitive, powerful interface. We're not just locating recycling 
-              centers—we're igniting a movement toward responsible electronics 
-              lifecycle management and environmental stewardship.
-            </p>
+          <Link
+            href="/contactus"
+            className="
+              px-8 py-3 bg-green-600 text-white rounded-xl 
+              font-semibold shadow-lg hover:shadow-green-300/40 
+              hover:bg-green-700 transition duration-300
+            "
+          >
+            Connect With Us
+          </Link>
 
-            {/* Buttons */}
-            <div className="flex flex-wrap gap-4">
-              <Link
-                href="/contactus"
-                className="px-6 py-3 bg-green-600 text-white rounded-lg font-medium shadow-md hover:bg-green-700 transition"
-              >
-                Connect With Us
-              </Link>
-
-              <Link
-                href="/recycle"
-                className="px-6 py-3 bg-white border border-green-600 text-green-700 rounded-lg font-medium shadow-sm hover:bg-green-50 transition"
-              >
-                Explore Recycling Solutions
-              </Link>
-            </div>
-          </div>
-
-          {/* Right Image */}
-          <div className="md:w-1/2 flex justify-center">
-            <Image
-              src={feature}
-              alt="Sustainable E-Waste Management"
-              width={450}
-              height={450}
-              className="rounded-xl shadow-lg"
-            />
-          </div>
+          <Link
+            href="/recycle"
+            className="
+              px-8 py-3 rounded-xl border border-green-600 
+              text-green-700 dark:text-green-400 font-semibold 
+              bg-transparent hover:bg-green-50 dark:hover:bg-green-900/20 
+              transition duration-300
+            "
+          >
+            Explore Recycling Solutions
+          </Link>
         </div>
       </div>
     </section>

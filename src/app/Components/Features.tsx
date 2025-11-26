@@ -42,26 +42,86 @@ const elocateFeatures = [
 
 const Features: React.FC = () => {
   return (
-    <>
-      <section className=" features" id="features" aria-label="features">
-        <div className="container mx-auto px-4 pb-4 text-center">
-          <AboutUs />
-          <ul className="grid-list section py-20 my-2">
-            {elocateFeatures.map((feature, index) => (
-              <li key={index}>
-                <div className="features-card">
-                  <data className="card-number" value={feature.number}>
-                    {feature.number}
-                  </data>
-                  <h3 className="h3 card-title">{feature.title}</h3>
-                  <p className="card-text text-2xl">{feature.description}</p>
+    <section
+      id="features"
+      className="py-20 bg-gradient-to-b from-white to-green-50 dark:from-black dark:to-gray-900"
+    >
+      <div className="container mx-auto px-6 text-center">
+        
+        {/* Reuse About Section Header */}
+        <AboutUs />
+
+        {/* Feature Cards */}
+        <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-12">
+          {elocateFeatures.map((feature, index) => (
+            <li key={index}>
+              <div className="
+                group 
+                relative 
+                rounded-2xl 
+                p-8 
+                backdrop-blur-xl 
+                bg-white/40 
+                dark:bg-white/10 
+                border 
+                border-green-200 
+                dark:border-green-800 
+                shadow-xl 
+                transition 
+                duration-500 
+                hover:shadow-green-300/50 
+                hover:-translate-y-3
+                hover:scale-[1.03]
+              ">
+                {/* Number Badge */}
+                <div className="
+                  absolute 
+                  -top-4 
+                  -left-4 
+                  bg-green-600 
+                  text-white 
+                  w-12 
+                  h-12 
+                  rounded-xl 
+                  flex 
+                  items-center 
+                  justify-center 
+                  text-xl 
+                  font-bold 
+                  shadow-lg
+                ">
+                  {feature.number}
                 </div>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-    </>
+
+                {/* Title */}
+                <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-6 mb-4 group-hover:text-green-700 transition">
+                  {feature.title}
+                </h3>
+
+                {/* Description */}
+                <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
+                  {feature.description}
+                </p>
+
+                {/* Glow Effect */}
+                <div className="
+                  absolute 
+                  inset-0 
+                  rounded-2xl 
+                  opacity-0 
+                  group-hover:opacity-20 
+                  transition 
+                  duration-500 
+                  bg-green-400 
+                  blur-xl
+                "></div>
+              </div>
+            </li>
+          ))}
+        </ul>
+
+      </div>
+    </section>
   );
 };
 

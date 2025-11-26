@@ -10,14 +10,14 @@ export const facility = [
     address: "5 Ganeshprasad IInd Floor, 890, Sadashiv Peth, Pune, Maharashtra 411030"
   },
   {
-    name: "E-Waste Recycler Bengaluru 1",
+    name: "Aptus E waste Recycling Ltd",
     capacity: 120,
-    lon: 77.5946,
-    lat: 12.9716,
-    contact: "080-41263333",
+    lon: 77.559383,
+    lat: 13.026225,
+    contact: "+91-7876543976",
     time: "9:00 AM - 6:00 PM",
     verified: true,
-    address: "MG Road, Bengaluru, Karnataka",
+    address: "6th Main Road, NR Colony,Yeshwanthpur,Bengaluru,Karnataka 560022",
   },
   {
     name: "Green e-Bin E-waste Recycling",

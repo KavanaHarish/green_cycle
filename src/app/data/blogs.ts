@@ -25,7 +25,7 @@ export const blogs: BlogCard[] = [
     image: "https://images.unsplash.com/photo-1611284446314-60a58ac0deb9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     category: "Education",
     readTime: "8 min read",
-    author: "ELocate Research Team",
+    author: "GreenCycle Research Team",
     date: "June 15, 2023",
     tags: ["e-waste", "education", "sustainability", "environment"],
     content: {
@@ -63,7 +63,7 @@ export const blogs: BlogCard[] = [
     image: "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     category: "Guide",
     readTime: "6 min read",
-    author: "ELocate Team",
+    author: "GreenCycle Team",
     date: "August 12, 2023",
     tags: ["disposal", "recycling", "guide", "practical tips"]
   },

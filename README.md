@@ -3,24 +3,7 @@
 
 ## 📝 Project Overview
 
-ELocate is a cutting-edge platform engineered to combat the escalating e-waste crisis by creating seamless connections between users and certified e-waste disposal facilities. Our comprehensive solution leverages advanced technology to promote environmental sustainability and responsible electronics lifecycle management.
-
-### 🎬 Introduction Video
-
-[Watch our detailed introduction to ELocate](https://youtu.be/rEyCnsLWbJU)
-
-## Live Preview
-
-Experience our platform in action: [ELocate ♻️](https://elocateinnovate.vercel.app)
-
-![image](https://github.com/shuence/ELocate/assets/65482186/02809587-82e8-4633-a53e-74e7f74654b4)
-![image](https://github.com/shuence/ELocate/assets/65482186/a4fae975-b9c3-4753-b1d8-ebb0fef7b64f)
-![image](https://github.com/shuence/ELocate/assets/65482186/930b1433-3d1b-4a32-a3c5-5f7f75ebbabc)
-![image](https://github.com/shuence/ELocate/assets/65482186/b48752ab-dc1e-48ea-9f83-5a7d47d50ccf)
-
-## Platform Demo
-
-See our prototype in action: [Comprehensive Video Demonstration](https://youtu.be/3IN58Qo_FvA)
+GreenCycle is a cutting-edge platform engineered to combat the escalating e-waste crisis by creating seamless connections between users and certified e-waste disposal facilities. Our comprehensive solution leverages advanced technology to promote environmental sustainability and responsible electronics lifecycle management.
 
 ## ✨ Key Features
 
@@ -52,10 +35,10 @@ See our prototype in action: [Comprehensive Video Demonstration](https://youtu.b
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/GreenCycle.git
+git clone https://github.com/yourusername/green_cycle.git
 
 # Navigate to project directory
-cd GreenCycle
+cd green_gycle
 
 # Install dependencies
 npm install
@@ -70,7 +53,7 @@ npm run dev
 
 ## 📊 Innovation & Learning
 
-Through the development of ELocate, our team mastered:
+Through the development of GreenCycle, our team mastered:
 
 - Sophisticated geolocation API implementation
 - Sustainable technology development practices
@@ -86,17 +69,12 @@ Through the development of ELocate, our team mastered:
 - **IoT Ecosystem**: Smart collection bins with real-time tracking and analytics
 - **Community Platform**: Collaborative network for environmentally conscious individuals
 - **Global Coverage**: Strategic expansion to additional regions and international markets
-- **AI-Powered Recommendations**: Personalized recycling suggestions based on user behavior
-
-## 👥 Meet Our Innovators
-
-
-## 📄 License
+- **AI-Powered Recommendations**: Personalized recycling suggestions based on user behavio
 
 
 
 ::: center
 
-Engineered with 💚 by Team Spam Byte | Pioneering Sustainable Technology Solutions
+Engineered with 💚 by GROUP 17 | Pioneering Sustainable Technology Solutions
 
 :::

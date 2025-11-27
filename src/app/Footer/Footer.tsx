@@ -94,9 +94,9 @@ const Footer = () => {
       {/* Footer Bottom */}
       <div className="mt-16 pt-6 border-t border-green-900/40 text-center">
         <p className="text-lg text-gray-400 hover:text-gray-200 transition-colors">
-          &copy; 2024 GreenCycle • Built by{" "}
+          &copy; 2025 GreenCycle • Built by{" "}
           <span className="text-green-400 font-semibold hover:text-green-300 transition-colors">
-            Team Spam Byte
+            GROUP 17
           </span>
         </p>
 

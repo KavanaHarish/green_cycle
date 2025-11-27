@@ -7,10 +7,8 @@ import logo from "../../assets/ELocate-s.png";
 const Footer = () => {
   return (
     <footer className="
-      bg-gradient-to-b from-[#0A140F] to-[#0F1A12]
-      text-gray-300 pt-20 pb-10 mt-10 
-      border-t border-green-900/40 
-      shadow-2xl shadow-black/40
+      bg-black
+      text-gray-500 pt-20 pb-8
       relative overflow-hidden
     ">
 
@@ -21,17 +19,17 @@ const Footer = () => {
       <div className="absolute -top-10 -left-10 w-40 h-40 bg-green-700/10 rounded-full blur-3xl animate-floating"></div>
       <div className="absolute bottom-0 right-0 w-52 h-52 bg-emerald-600/10 rounded-full blur-3xl animate-floating-delayed"></div>
 
-      <div className="relative max-w-7xl mx-auto p-2 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-14">
+      <div className="relative w-full max-w-8xl mx-auto p-2 grid grid-cols-1 md:grid-cols-[1.5fr_1fr_1fr] gap-24">
 
         {/* Brand Section */}
-        <div className="transform hover:scale-[1.03] transition-all duration-300 text-left">
+        <div className="transform hover:scale-[1.02] transition-all duration-300 text-center">
           <Image
             src={logo}
             alt="GreenCycle"
             width={130}
-            className="mb-6 opacity-90 drop-shadow-[0_0_20px_rgba(16,185,129,0.4)] hover:drop-shadow-[0_0_25px_rgba(16,185,129,0.7)] transition-all"
+            className="ml-16 opacity-90 drop-shadow-[0_0_20px_rgba(16,185,129,0.1)] hover:drop-shadow-[0_0_25px_rgba(16,185,129,0.2)] transition-all"
           />
-          <p className="text-gray-400 leading-relaxed text-lg hover:text-gray-200 transition-colors">
+          <p className="text-gray-500 leading-relaxed text-xl hover:text-gray-200 transition-colors text-left ml-16 mr-20">
             GreenCycle helps locate certified recycling facilities and promotes
             sustainable e-waste management using smart technology and awareness.
           </p>
@@ -39,7 +37,7 @@ const Footer = () => {
 
         {/* Recycling Solutions */}
         <div className="transform hover:-translate-y-1 transition-all duration-300">
-          <h3 className="text-xl font-semibold text-green-400 mb-5 underline decoration-green-700/40 drop-shadow-[0_0_10px_rgba(16,185,129,0.5)]">
+          <h3 className="text-xl font-semibold text-green-400 mb-5 decoration-green-700/40 drop-shadow-[0_0_10px_rgba(16,185,129,0.5)]">
             Recycling Solutions
           </h3>
           <ul className="space-y-3 text-lg">

@@ -86,7 +86,7 @@ const user = getUser();
 
   return (
     <header className={`header ${isHeaderActive ? "active" : ""}`} data-header>
-        <div className="container bg-green-600 shadow-md">
+        <div className="container bg-black shadow-md">
         <Link href="/">
           <Image
             src={logo}
@@ -114,7 +114,7 @@ const user = getUser();
               ></IonIcon>
             </button>
           </div>
-        
+          
           <ul className="navbar-list">
             <NavItem label="Home" />
             <NavItem label="About" />
@@ -126,7 +126,7 @@ const user = getUser();
           </ul>
         </nav>
 
-        <h1 className='font-montserrat font-bold text-xl ml-12 md:ml-4 md:text-2xl text-emerald-600 flex items-center gap-[1vh]'>
+        <h1 className='font-montserrat font-bold text-xl ml-12 md:ml-4 md:text-2xl text-white flex items-center gap-[1vh]'>
           <IonIcon icon={location} aria-hidden="true" role="img"></IonIcon>
           {locations || 'Loading...'}
         </h1>

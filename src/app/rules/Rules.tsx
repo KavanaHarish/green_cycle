@@ -12,7 +12,7 @@ const Rules = (props: Props) => {
       <title>ELocate - E-Waste Regulations & Compliance</title>
       <meta name="description" content="Stay informed about the latest e-waste management regulations in India. Access official notifications, industry news, and compliance requirements." />
     </Head>
-    <div className="flex flex-col section container rules-container">
+    <div className="flex flex-col w-full section container rules-container">
       <div className="w-full mx-auto text-2xl px-4">
         <h2 className="text-3xl text-emerald-600 font-bold mb-6">
           Indian E-Waste Management Regulatory Framework
@@ -201,75 +201,7 @@ const Rules = (props: Props) => {
           </p>
         </div>
       </div>
-      <hr className="bg-emerald-200 mt-10 mb-10 p-[1px]" />
       
-      <div className="flex flex-col md:flex-row w-full mx-auto md:w-full md:max-h-140 max-h-[130rem] gap-10 md:mt-10 px-4">
-        <div className="flex flex-col w-full my-4 projects shadow-lg bg-gray-50 border border-gray-200 rounded-lg overflow-y-auto p-8">
-          <h2 className="text-2xl md:text-3xl font-bold mb-6 py-4 border-b border-emerald-200 text-center text-emerald-600">
-            Official Notifications
-          </h2>
-          {notifications.map((notification, index) => (
-            <div key={index} className="mb-6 p-4 border-l-4 border-emerald-100 hover:bg-gray-100 transition duration-300">
-              <h3 className="text-xl font-semibold mb-3 text-gray-800">
-                {notification.title}
-              </h3>
-              <a
-                href={notification.Link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:text-emerald-500 underline mb-4 inline-flex items-center"
-              >
-                View Official Document <span className="ml-1">→</span>
-              </a>
-            </div>
-          ))}
-        </div>
-        
-        <div className="flex flex-col w-full my-4 projects shadow-lg bg-gray-50 border border-gray-200 rounded-lg overflow-y-auto p-8">
-          <h2 className="text-2xl md:text-3xl font-bold mb-6 py-4 border-b border-emerald-200 text-center text-emerald-600">
-            Industry Updates & News
-          </h2>
-          {news.map((notification, index) => (
-            <div key={index} className="mb-6 p-4 border-l-4 border-emerald-100 hover:bg-gray-100 transition duration-300">
-              <h3 className="text-xl font-semibold mb-2 text-gray-800">
-                {notification.title}
-              </h3>
-              <p className="text-sm text-emerald-600 mb-2">{notification.date}</p>
-              <p className="text-lg mb-3 text-gray-700">{notification.content}</p>
-              <a
-                href={notification.Link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:text-emerald-500 underline mb-4 inline-flex items-center"
-              >
-                Read Complete Article <span className="ml-1">→</span>
-              </a>
-            </div>
-          ))}
-        </div>
-        
-        <div className="flex flex-col w-full my-4 projects shadow-lg bg-gray-50 border border-gray-200 rounded-lg overflow-y-auto p-8">
-          <h2 className="text-2xl md:text-3xl font-bold mb-6 py-4 border-b border-emerald-200 text-center text-emerald-600">
-            Maharashtra E-waste Annual Reports
-          </h2>
-          {report.map((notification, index) => (
-            <div key={index} className="mb-6 p-4 border-l-4 border-emerald-100 hover:bg-gray-100 transition duration-300">
-              <h3 className="text-xl font-semibold mb-3 text-gray-800">
-                {notification.title}
-              </h3>
-              <a
-                href={notification.Link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:text-emerald-500 underline mb-4 inline-flex items-center"
-              >
-                Access Full Report <span className="ml-1">→</span>
-              </a>
-            </div>
-          ))}
-        </div>
-      </div>
-      <hr className="bg-emerald-200 mt-10 p-[1px]" />
     </div>
     </>
   );

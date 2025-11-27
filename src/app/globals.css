@@ -1117,10 +1117,11 @@ body {
   .navbar-list {
     display: flex;
     gap: 40px;
+    color: white;
   }
 
   .navbar-link {
-    color: var(--rich-black-fogra-29-1);
+    color: rgba(255, 255, 255, 0.85);
     font-weight: var(--fw-500);
     padding-block: 0;
     position: relative;

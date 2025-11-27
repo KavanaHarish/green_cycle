@@ -270,10 +270,10 @@ if (isLoading) {
   const currentDate = new Date().toISOString().split("T")[0];
 
   return (
-    <div className="container mx-auto p-8">
+    <div className="bg-gradient-to-b from-black to-gray-900 mx-auto p-8">
       <ToastContainer />
-
-      <h1 className="text-4xl font-bold mb-6 p-6 text-center">
+    <div className="container mx-auto">
+      <h1 className="text-4xl font-bold mb-6 p-6 text-center text-white">
         Smartphone Recycling
       </h1>
       <form
@@ -286,7 +286,7 @@ if (isLoading) {
         <div className="mb-4">
           <label
             htmlFor="brand"
-            className="block text-2xl font-medium text-gray-600"
+            className="block text-2xl font-medium text-gray-400"
           >
             Select Brand:
           </label>
@@ -308,7 +308,7 @@ if (isLoading) {
         <div className="mb-4">
           <label
             htmlFor="model"
-            className="block text-2xl font-medium text-gray-600"
+            className="block text-2xl font-medium text-gray-400"
           >
             Select Model:
           </label>
@@ -330,7 +330,7 @@ if (isLoading) {
         <div className="mb-4">
           <label
             htmlFor="recycleItemPrice"
-            className="block text-2xl font-medium text-gray-600"
+            className="block text-2xl font-medium text-gray-400"
           >
             Recycle Item Price:
           </label>
@@ -346,7 +346,7 @@ if (isLoading) {
         <div className="mb-4">
           <label
             htmlFor="pickupDate"
-            className="block text-2xl font-medium text-gray-600"
+            className="block text-2xl font-medium text-gray-400"
           >
             Pickup Date:
           </label>
@@ -356,14 +356,14 @@ if (isLoading) {
             value={pickupDate}
             min={currentDate}
             onChange={(e) => setPickupDate(e.target.value)}
-            className="w-full p-2 sign-field rounded-md placeholder:font-light placeholder:text-gray-500"
+            className="w-full p-2 sign-field rounded-md placeholder:font-light placeholder:text-gray-200"
           />
         </div>
 
         <div className="mb-4">
           <label
             htmlFor="pickupTime"
-            className="block text-2xl font-medium text-gray-600"
+            className="block text-2xl font-medium text-gray-400"
           >
             Pickup Time:
           </label>
@@ -379,7 +379,7 @@ if (isLoading) {
         <div className="mb-4">
           <label
             htmlFor="address"
-            className="block text-2xl font-medium text-gray-600"
+            className="block text-2xl font-medium text-gray-400"
           >
             Location:
           </label>
@@ -395,7 +395,7 @@ if (isLoading) {
         <div className="mb-4">
           <label
             htmlFor="phone"
-            className="block text-2xl font-medium text-gray-600"
+            className="block text-2xl font-medium text-gray-400"
           >
             Phone:
           </label>
@@ -411,7 +411,7 @@ if (isLoading) {
         <div className="mb-4">
           <label
             htmlFor="facility"
-            className="block text-2xl font-medium text-gray-600"
+            className="block text-2xl font-medium text-gray-400"
           >
             Select Facility:
           </label>
@@ -438,6 +438,7 @@ if (isLoading) {
           </button>
         </div>
       </form>
+      </div>
     </div>
   );
 };

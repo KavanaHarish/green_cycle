@@ -43,8 +43,7 @@ const FAQ = () => {
   };
 
   return (
-    <section className="py-24 bg-gradient-to-b from-green-50 to-white dark:from-gray-900 dark:to-black">
-black
+    <section className="py-24 bg-gradient-to-b from-green-50 to-black dark:from-gray-900 dark:to-black">
       <div className="max-w-6xl mx-auto px-6">
 
         {/* Heading */}

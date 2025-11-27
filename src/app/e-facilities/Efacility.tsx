@@ -393,8 +393,9 @@ const FacilityMap: React.FC = () => {
         <meta name="description" content="Locate certified e-waste recycling facilities near you. Get directions, facility details, and book recycling services with our interactive map." />
       </Head>
     
-      <div className="min-h-screen bg-gradient-to-b from-green-50 to-white relative overflow-hidden e-facilities-container dark:from-gray-900 dark:to-black">
+      <div className="min-h-screen bg-gradient-to-b from-green-50 to-black to-transparent relative overflow-hidden e-facilities-container dark:from-gray-900 dark:to-black">
         {/* ===== BIG RANDOM FLOATING STICKERS ===== */}
+        <div className="absolute inset-0 overflow-visible pointer-events-none z-0">
 <motion.div
   animate={{ y: [0, -25, 0] }}
   transition={{ duration: 5, repeat: Infinity }}
@@ -451,6 +452,7 @@ const FacilityMap: React.FC = () => {
 >
   🧩
 </motion.div>
+</div>
 
 {/* Main Content */}
 <div className="relative z-10">
@@ -664,16 +666,7 @@ const FacilityMap: React.FC = () => {
           animation: pulse 2s infinite;
         }
         
-        @keyframes pulse {
-          0% {
-            transform: scale(0.5);
-            opacity: 1;
-          }
-          100% {
-            transform: scale(1.5);
-            opacity: 0;
-          }
-        }
+        
       `}</style>
     </>
   );

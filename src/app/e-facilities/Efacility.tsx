@@ -464,8 +464,8 @@ const FacilityMap: React.FC = () => {
         ) : clientLocation ? (
           <div className="pt-8 pb-16 px-4 md:px-8">
             <div className="mb-8 text-center">
-              <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">E-Waste Recycling Facility Locator</h1>
-              <p className="text-gray-600 max-w-2xl mx-auto">
+              <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">E-Waste Recycling Facility Locator</h1>
+              <p className="text-gray-400 max-w-2xl mx-auto">
                 Find certified e-waste collection and recycling centers near you. Get directions, check facility details, and book recycling services.
               </p>
             </div>
@@ -623,7 +623,7 @@ const FacilityMap: React.FC = () => {
               
               <button 
                 onClick={handleAllowLocationClick} 
-                className="bg-emerald-500 hover:bg-emerald-600 text-white font-medium py-3 px-6 rounded-md transition-colors duration-300"
+                className="bg-emerald-500 hover:bg-emerald-600 text-white font-medium py-5 px-6 rounded-md transition-colors duration-300"
               >
                 Allow Location Access
               </button>

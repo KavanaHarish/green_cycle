@@ -8,33 +8,32 @@ const About = () => {
         
         {/* Subtitle */}
         <p className="text-green-600 font-semibold tracking-wide mb-2">
-          — Discover GreenCycle —
+          — About GreenCycle —
         </p>
 
         {/* Title */}
         <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white leading-tight">
-          Pioneering the Future of
+          Transforming India’s Approach to
           <br />
           <span className="text-green-700 dark:text-green-400">
-            E-Waste Management & Sustainability
+            Electronic Waste & Sustainability
           </span>
         </h2>
 
         {/* Description */}
         <p className="mt-10 text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed max-w-4xl mx-auto">
-          India generates over{" "}
+          India discards more than{" "}
           <span className="font-semibold text-green-600">
-            1.71 million metric tons of e-waste
+            1.7 million tonnes of e-waste
           </span>{" "}
-          annually — much of it improperly disposed.  
-          Limited awareness and lack of trusted recycling facilities worsen the crisis.
+          each year — and a large portion still ends up in landfills or informal recycling zones.
+          The gap between growing digital use and safe disposal is wider than ever.
           <br /><br />
           <span className="font-semibold text-green-700 dark:text-green-400">
             GreenCycle
           </span>{" "}
-          bridges this critical gap by connecting citizens with verified
-          e-waste facilities, simplifying responsible recycling and
-          empowering communities to create a cleaner, greener future.
+          is built to close that gap by helping users discover verified recycling partners,
+          learn responsible disposal practices, and contribute to a cleaner environment with ease.
         </p>
 
         {/* Buttons */}
@@ -48,7 +47,7 @@ const About = () => {
               hover:bg-green-700 transition duration-300
             "
           >
-            Connect With Us
+            Get in Touch
           </Link>
 
           <Link
@@ -60,7 +59,7 @@ const About = () => {
               transition duration-300
             "
           >
-            Explore Recycling Solutions
+            View Recycling Options
           </Link>
         </div>
       </div>

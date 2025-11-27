@@ -75,15 +75,15 @@ const ContactUs = () => {
 
         {/* Heading */}
         <div className="flex flex-col items-center justify-center px-10">
-          <div className="text-black text-center font-bold text-2xl md:text-4xl 2xl:text-6xl uppercase tracking-widest">
+          <div className="text-white text-center font-bold text-2xl md:text-4xl 2xl:text-6xl uppercase tracking-widest">
             —Connect With Us—
           </div>
 
-          <div className="text-black text-center text-xl md:text-3xl mt-4">
+          <div className="text-white text-center text-xl md:text-3xl mt-4">
             Partner with us in building a sustainable future for electronics
           </div>
 
-          <p className="text-gray-600 text-center max-w-3xl mt-4 text-lg">
+          <p className="text-gray-400 text-center max-w-3xl mt-4 text-lg">
             Whether you have questions about our services, want to suggest a
             recycling facility, or need assistance with e-waste management, our
             dedicated team is here to help you make environmentally responsible
@@ -97,13 +97,13 @@ const ContactUs = () => {
 
             {/* FORM SECTION */}
             <div className="p-6 rounded-md shadow-md hover:shadow-lg transition-shadow duration-300">
-              <h3 className="md:text-4xl text-2xl text-center font-semibold py-4 mb-4">
+              <h3 className="md:text-4xl text-2xl text-white text-center font-semibold py-4 mb-4">
                 Reach Out to Our Team
               </h3>
 
               <form className="mb-0 mx-auto" onSubmit={SendMsg}>
                 <div className="mb-4">
-                  <label className="block text-gray-800 font-semibold mb-2 text-xl">
+                  <label className="block text-gray-300 font-semibold mb-2 text-xl">
                     Your Name
                   </label>
                   <input
@@ -118,7 +118,7 @@ const ContactUs = () => {
                 </div>
 
                 <div className="mb-4">
-                  <label className="block text-gray-800 font-semibold mb-2 text-xl">
+                  <label className="block text-gray-300 font-semibold mb-2 text-xl">
                     Email Address
                   </label>
                   <input
@@ -133,7 +133,7 @@ const ContactUs = () => {
                 </div>
 
                 <div className="mb-4">
-                  <label className="block text-gray-800 font-semibold mb-2 text-xl">
+                  <label className="block text-gray-300 font-semibold mb-2 text-xl">
                     Phone Number
                   </label>
                   <input
@@ -148,7 +148,7 @@ const ContactUs = () => {
                 </div>
 
                 <div className="mb-6">
-                  <label className="block text-gray-800 font-semibold mb-2 text-xl">
+                  <label className="block text-gray-300 font-semibold mb-2 text-xl">
                     Your Message
                   </label>
                   <textarea
@@ -173,7 +173,7 @@ const ContactUs = () => {
 
             {/* TEAM CARDS SECTION */}
             <div className="p-6 rounded-md shadow-md hover:shadow-lg transition-shadow duration-300">
-              <h3 className="text-3xl text-center font-semibold py-4 mb-6">
+              <h3 className="text-3xl text-white text-center font-semibold py-4 mb-6">
                 Our Team Members
               </h3>
 
@@ -184,55 +184,55 @@ const ContactUs = () => {
                   <div className="w-16 h-16 rounded-full bg-green-600 text-white flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                     AM
                   </div>
-                  <h4 className="text-xl font-semibold text-center">Adarsh M</h4>
-                  <p className="text-gray-600 dark:text-gray-300 text-center text-sm mt-1">
+                  <h4 className="text-xl text-white font-semibold text-center">Adarsh M</h4>
+                  <p className="text-gray-300 dark:text-gray-300 text-center text-sm mt-1">
                     Team Member
                   </p>
                   <p className="text-center font-semibold text-green-700 dark:text-green-400 mt-2">
-                    +91 9876543210
+                    +91 8971989194
                   </p>
                 </div>
 
                 {/* Member 2 */}
                 <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md hover:shadow-green-300/40 transition-transform hover:-translate-y-2">
                   <div className="w-16 h-16 rounded-full bg-green-600 text-white flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                    SK
+                    KH
                   </div>
-                  <h4 className="text-xl font-semibold text-center">Shivam K</h4>
-                  <p className="text-gray-600 dark:text-gray-300 text-center text-sm mt-1">
+                  <h4 className="text-xl text-white font-semibold text-center">Kavana H</h4>
+                  <p className="text-gray-300 dark:text-gray-300 text-center text-sm mt-1">
                     Team Member
                   </p>
                   <p className="text-center font-semibold text-green-700 dark:text-green-400 mt-2">
-                    +91 9876501234
+                    +91 6364329887
                   </p>
                 </div>
 
                 {/* Member 3 */}
                 <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md hover:shadow-green-300/40 transition-transform hover:-translate-y-2">
                   <div className="w-16 h-16 rounded-full bg-green-600 text-white flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                    RS
+                    DS
                   </div>
-                  <h4 className="text-xl font-semibold text-center">Riya S</h4>
-                  <p className="text-gray-600 dark:text-gray-300 text-center text-sm mt-1">
+                  <h4 className="text-xl text-white font-semibold text-center">Dinesh Sapkota</h4>
+                  <p className="text-gray-300 dark:text-gray-300 text-center text-sm mt-1">
                     Team Member
                   </p>
                   <p className="text-center font-semibold text-green-700 dark:text-green-400 mt-2">
-                    +91 9876512345
+                    +91 8660961789 
                   </p>
                 </div>
 
                 {/* Member 4 */}
                 <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md hover:shadow-green-300/40 transition-transform hover:-translate-y-2">
                   <div className="w-16 h-16 rounded-full bg-green-600 text-white flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                    VK
+                    DP
                   </div>
-                  <h4 className="text-xl font-semibold text-center">Vikas K</h4>
-                  <p className="text-gray-600 dark:text-gray-300 text-center text-sm mt-1">
+                  <h4 className="text-xl text-white font-semibold text-center">Dhanalakshmi P</h4>
+                  <p className="text-gray-300 dark:text-gray-300 text-center text-sm mt-1">
                     Team Member
                   </p>
                   <p className="text-center font-semibold text-green-700 dark:text-green-400 mt-2">
-                    +91 9876523412
-                  </p>
+                    +91 9901818603
+                                      </p>
                 </div>
 
               </div>

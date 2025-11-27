@@ -86,7 +86,7 @@ const user = getUser();
 
   return (
     <header className={`header ${isHeaderActive ? "active" : ""}`} data-header>
-        <div className="container bg-[#182B20] shadow-md">
+        <div className="container bg-green-600 shadow-md">
         <Link href="/">
           <Image
             src={logo}

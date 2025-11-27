@@ -43,11 +43,12 @@ const FAQ = () => {
   };
 
   return (
-    <section className="py-24 bg-transparent">
+    <section className="py-24 bg-gradient-to-b from-green-50 to-white dark:from-gray-900 dark:to-black">
+black
       <div className="max-w-6xl mx-auto px-6">
 
         {/* Heading */}
-        <h2 className="text-center text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-4">
+        <h2 className="text-center text-4xl md:text-5xl font-extrabold text-white">
           Frequently Asked Questions
         </h2>
         <p className="text-center text-gray-600 dark:text-gray-300 mb-12 text-lg">
@@ -64,13 +65,13 @@ const FAQ = () => {
                 group cursor-pointer rounded-xl p-6 border transition-all duration-300 
                 hover:-translate-y-1 hover:shadow-green-200
                 ${active === index
-                  ? "bg-white dark:bg-gray-800 border-green-600 shadow-lg"
+                  ? "bg-green dark:bg-green-800 border-green-600 shadow-lg text-white"
                   : "bg-transparent border-gray-300 dark:border-gray-700"
                 }
               `}
             >
               <div className="flex items-center justify-between">
-                <h4 className="text-xl md:text-2xl font-semibold text-gray-900 dark:text-white">
+                <h4 className="text-xl md:text-2xl font-semibold  text-green-200">
                   {item.question}
                 </h4>
                 <span className="text-4xl text-green-600 dark:text-green-400">

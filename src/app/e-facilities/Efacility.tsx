@@ -10,6 +10,7 @@ import "@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css";
 import Link from "next/link";
 import { facility } from "../data/facility";
 import Head from "next/head";
+import { motion } from "framer-motion";
 
 interface Facility {
   address: string;
@@ -392,7 +393,67 @@ const FacilityMap: React.FC = () => {
         <meta name="description" content="Locate certified e-waste recycling facilities near you. Get directions, facility details, and book recycling services with our interactive map." />
       </Head>
     
-      <div className="min-h-screen bg-gray-50 e-facilities-container">
+      <div className="min-h-screen bg-gradient-to-b from-green-50 to-white relative overflow-hidden e-facilities-container dark:from-gray-900 dark:to-black">
+        {/* ===== BIG RANDOM FLOATING STICKERS ===== */}
+<motion.div
+  animate={{ y: [0, -25, 0] }}
+  transition={{ duration: 5, repeat: Infinity }}
+  className="absolute left-10 top-40 text-6xl opacity-40 select-none pointer-events-none z-0"
+>
+  🗑️
+</motion.div>
+<motion.div
+  animate={{ y: [0, 30, 0] }}
+  transition={{ duration: 6, repeat: Infinity }}
+  className="absolute right-12 top-60 text-7xl opacity-40 select-none pointer-events-none z-0"
+>
+  🍃
+</motion.div>
+<motion.div
+  animate={{ x: [0, 20, 0] }}
+  transition={{ duration: 7, repeat: Infinity }}
+  className="absolute left-1/2 top-24 text-6xl opacity-30 select-none pointer-events-none z-0"
+>
+  🌍
+</motion.div>
+<motion.div
+  animate={{ y: [0, -20, 0] }}
+  transition={{ duration: 4, repeat: Infinity }}
+  className="absolute right-20 bottom-36 text-5xl opacity-40 select-none pointer-events-none z-0"
+>
+  ✨
+</motion.div>
+<motion.div
+  animate={{ x: [0, -25, 0] }}
+  transition={{ duration: 6, repeat: Infinity }}
+  className="absolute left-24 bottom-32 text-6xl opacity-40 select-none pointer-events-none z-0"
+>
+  🔋
+</motion.div>
+<motion.div
+  animate={{ y: [0, -16, 0] }}
+  transition={{ duration: 5.5, repeat: Infinity }}
+  className="absolute right-1/2 bottom-20 text-7xl opacity-40 select-none pointer-events-none z-0"
+>
+  ♻️
+</motion.div>
+<motion.div
+  animate={{ y: [0, 20, 0] }}
+  transition={{ duration: 6, repeat: Infinity }}
+  className="absolute right-1/4 top-88 text-6xl opacity-40 select-none pointer-events-none z-0"
+>
+  💻
+</motion.div>
+<motion.div
+  animate={{ y: [0, -34, 0] }}
+  transition={{ duration: 6, repeat: Infinity }}
+  className="absolute left-1/4 top-34 text-6xl opacity-40 select-none pointer-events-none z-0"
+>
+  🧩
+</motion.div>
+
+{/* Main Content */}
+<div className="relative z-10">
         {isLoading ? (
           <div className="flex items-center justify-center h-screen">
             <div className="text-center">
@@ -545,7 +606,7 @@ const FacilityMap: React.FC = () => {
             </div>
           </div>
         ) : (
-          <div className="flex items-center justify-center h-screen bg-gray-50 px-4">
+          <div className="flex items-center justify-center h-screen px-4">
             <div className="max-w-md mx-auto text-center">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-20 w-20 text-gray-400 mx-auto mb-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -570,7 +631,7 @@ const FacilityMap: React.FC = () => {
           </div>
         )}
       </div>
-      
+      </div>
       <style jsx global>{`
         .mapboxgl-popup-content {
           padding: 0;

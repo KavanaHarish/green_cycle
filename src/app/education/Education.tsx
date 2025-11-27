@@ -56,9 +56,9 @@ const Education: React.FC = () => {
         <div className="bg-white shadow-xl rounded-lg overflow-hidden mb-16 max-w-5xl mx-auto transform transition-transform hover:scale-[1.01]">
           <div className="md:flex">
             <div className="md:w-1/2 relative h-64 md:h-auto">
-              <Image 
-                src="https://images.unsplash.com/photo-1611284446314-60a58ac0deb9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                alt="E-waste management and sustainability"
+              <img 
+                src="https://media.wired.com/photos/5a4ef5dfd65b284440b2de7a/master/w_960,c_limit/Ctrl_x_loeffelbein_009.jpg"
+                alt=" Impact of E-waste On Human Health And Environment "
                 layout="fill"
                 objectFit="cover"
                 className="h-full w-full"
@@ -72,16 +72,15 @@ const Education: React.FC = () => {
                 <span className="bg-emerald-100 text-emerald-800 text-xs font-medium px-2.5 py-0.5 rounded mr-2">Education</span>
                 <span className="text-gray-500 text-sm">8 min read</span>
               </div>
-              <h2 className="text-2xl font-bold text-gray-800 mt-3 mb-4">The Growing E-Waste Crisis: Understanding Our Digital Footprint</h2>
+              <h2 className="text-2xl font-bold text-gray-800 mt-3 mb-4">The Growing E-Waste Crisis: Significant environmental and health risks </h2>
               <p className="text-gray-600 mb-6">
-                The rapid pace of technological advancement has transformed modern life, but it comes with a hidden cost - electronic waste. 
-                Learn how your devices impact the planet and what you can do to minimize your digital carbon footprint.
+                The issue of e-waste management is growing in importance due to the exponential growth of e-waste on a global scale. Prospects for material recovery and the problems in handling e-waste are crucial to sustainable manufacturing
               </p>
               <div className="flex items-center mb-6">
                 <div className="w-10 h-10 rounded-full bg-emerald-500 flex items-center justify-center text-white font-bold mr-3">E</div>
                 <div>
-                  <p className="text-sm font-semibold">ELocate Research Team</p>
-                  <p className="text-xs text-gray-500">June 15, 2023</p>
+                  <p className="text-sm font-semibold">GreenCycle Research Team</p>
+                  <p className="text-xs text-gray-500">October 31, 2025</p>
                 </div>
               </div>
               <Link
@@ -89,11 +88,11 @@ const Education: React.FC = () => {
                 className="inline-flex items-center px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-medium rounded-lg transition-colors"
               >
                 Read Full Article
-                <svg className="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"></path></svg>
+                <svg className="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="https://microjournal.researchfloor.org/impact-of-e-waste-on-human-health-and-environment/"><path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"></path></svg>
               </Link>
             </div>
           </div>
-        </div>
+        </div>+
         
         {/* Category filter */}
         <div className="max-w-6xl mx-auto mb-8">

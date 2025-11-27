@@ -1,147 +1,127 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { IonIcon } from "@ionic/react";
-import { location, call, mail, paperPlane } from "ionicons/icons";
 import logo from "../../assets/ELocate-s.png";
-import emailjs from "@emailjs/browser";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
 const Footer = () => {
-  const [formData, setFormData] = useState({ email: "" });
-
-  const handleInputChange = (e: any) => {
-    setFormData({ email: e.target.value });
-  };
-
-  const SendMsg = (e: any) => {
-    e.preventDefault();
-    emailjs
-      .send(
-        "service_jqn5flv",
-        "template_ppph1w9",
-        { email: formData.email },
-        "ddYcz13MvW01UFF5u"
-      )
-      .then(() => {
-        toast.success("Subscribed successfully!");
-        setFormData({ email: "" });
-      })
-      .catch(() => toast.error("Subscription failed!"));
-  };
-
   return (
-    <footer className="bg-[#0f1a12] text-gray-300 pt-20 pb-10 mt-20 border-t border-green-900/40">
-      <ToastContainer position="top-right" theme="dark" />
+    <footer className="
+      bg-gradient-to-b from-[#0A140F] to-[#0F1A12]
+      text-gray-300 pt-20 pb-10 mt-10 
+      border-t border-green-900/40 
+      shadow-2xl shadow-black/40
+      relative overflow-hidden
+    ">
 
-      <div className="max-w-7xl mx-auto px-2 grid grid-cols-1 md:grid-cols-4 gap-12">
+      {/* ✨ Animated gradient glow behind footer */}
+      <div className="absolute inset-0 bg-gradient-to-r from-green-900/10 via-transparent to-green-900/10 animate-pulse pointer-events-none"></div>
+
+      {/* Floating Orbs */}
+      <div className="absolute -top-10 -left-10 w-40 h-40 bg-green-700/10 rounded-full blur-3xl animate-floating"></div>
+      <div className="absolute bottom-0 right-0 w-52 h-52 bg-emerald-600/10 rounded-full blur-3xl animate-floating-delayed"></div>
+
+      <div className="relative max-w-7xl mx-auto p-2 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-14">
 
         {/* Brand Section */}
-        <div>
-          <Image src={logo} alt="GreenCycle" width={120} className="mb-6" />
-          <p className="text-gray-400 leading-relaxed">
-            GreenCycle helps users locate certified recycling facilities and promotes
-            sustainable e-waste management through technology and awareness.
+        <div className="transform hover:scale-[1.03] transition-all duration-300 text-left">
+          <Image
+            src={logo}
+            alt="GreenCycle"
+            width={130}
+            className="mb-6 opacity-90 drop-shadow-[0_0_20px_rgba(16,185,129,0.4)] hover:drop-shadow-[0_0_25px_rgba(16,185,129,0.7)] transition-all"
+          />
+          <p className="text-gray-400 leading-relaxed text-lg hover:text-gray-200 transition-colors">
+            GreenCycle helps locate certified recycling facilities and promotes
+            sustainable e-waste management using smart technology and awareness.
           </p>
-
-          {/* Newsletter */}
-          <form
-            onSubmit={SendMsg}
-            className="mt-6 flex bg-[#1a2b20] border border-green-800/40 rounded-xl overflow-hidden"
-          >
-            <input
-              type="email"
-              name="email"
-              placeholder="Subscribe to newsletter"
-              className="flex-grow px-4 py-3 bg-transparent text-gray-200 placeholder-gray-500 outline-none"
-              value={formData.email}
-              onChange={handleInputChange}
-              required
-            />
-            <button className="px-5 bg-green-600 hover:bg-green-700 transition-colors flex items-center">
-              <IonIcon icon={paperPlane} className="w-6 h-6 text-white" />
-            </button>
-          </form>
         </div>
 
         {/* Recycling Solutions */}
-        <div>
-          <h3 className="text-lg font-semibold text-green-400 mb-4">
+        <div className="transform hover:-translate-y-1 transition-all duration-300">
+          <h3 className="text-xl font-semibold text-green-400 mb-5 underline decoration-green-700/40 drop-shadow-[0_0_10px_rgba(16,185,129,0.5)]">
             Recycling Solutions
           </h3>
-          <ul className="space-y-3">
-            <li><Link href="/recycle/smartphone" className="hover:text-green-400">Smartphones</Link></li>
-            <li><Link href="/recycle/laptop" className="hover:text-green-400">Laptops & Computers</Link></li>
-            <li><Link href="/recycle/accessories" className="hover:text-green-400">Accessories & Gadgets</Link></li>
-            <li><Link href="/recycle/tv" className="hover:text-green-400">Televisions & Displays</Link></li>
-            <li><Link href="/recycle/refrigerator" className="hover:text-green-400">Cooling Appliances</Link></li>
-            <li><Link href="/recycle/washing-machine" className="hover:text-green-400">Household Appliances</Link></li>
+          <ul className="space-y-3 text-lg">
+            {[
+              "/recycle/smartphone",
+              "/recycle/laptop",
+              "/recycle/accessories",
+              "/recycle/tv",
+              "/recycle/refrigerator",
+              "/recycle/washing-machine",
+            ].map((link, i) => (
+              <li key={i}>
+                <Link
+                  href={link}
+                  className="hover:text-green-400 transition-colors hover:pl-2 duration-200 inline-block"
+                >
+                  {link.split("/")[2].replace("-", " ").replace(/^\w/, c => c.toUpperCase())}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
 
         {/* Platform Info */}
-        <div>
-          <h3 className="text-lg font-semibold text-green-400 mb-4">
+        <div className="transform hover:-translate-y-1 transition-all duration-300">
+          <h3 className="text-xl font-semibold text-green-400 mb-5 underline decoration-green-700/40 drop-shadow-[0_0_10px_rgba(16,185,129,0.5)]">
             GreenCycle Platform
           </h3>
-          <ul className="space-y-3">
-            <li><Link href="/aboutus" className="hover:text-green-400">About Us</Link></li>
-            <li><Link href="/education" className="hover:text-green-400">Education Hub</Link></li>
-            <li><Link href="/facilities" className="hover:text-green-400">Recycling Facilities</Link></li>
-            <li><Link href="/news" className="hover:text-green-400">News & Updates</Link></li>
-            <li><Link href="/contactus" className="hover:text-green-400">Contact</Link></li>
-            <li><Link href="/blogs" className="hover:text-green-400">Insights & Articles</Link></li>
+          <ul className="space-y-3 text-lg">
+            {[
+              "/aboutus",
+              "/education",
+              "/facilities",
+              "/news",
+              "/contactus",
+              "/blogs",
+            ].map((link, i) => (
+              <li key={i}>
+                <Link
+                  href={link}
+                  className="hover:text-green-400 transition-colors hover:pl-2 duration-200 inline-block"
+                >
+                  {link.replace("/", "").replace(/^\w/, c => c.toUpperCase())}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
 
-        {/* Contact */}
-        <div>
-          <h3 className="text-lg font-semibold text-green-400 mb-4">
-            Contact Us
-          </h3>
-
-          <ul className="space-y-4">
-
-            <li className="flex gap-3 items-start">
-              <IonIcon icon={location} className="text-green-400 w-6 h-6" />
-              <span>Chh. Sambhajinagar, Maharashtra, India</span>
-            </li>
-
-            <li className="flex gap-3 items-center">
-              <IonIcon icon={call} className="text-green-400 w-6 h-6" />
-              <Link href="tel:+911234567890" className="hover:text-green-400">
-                +91 123 456 7890
-              </Link>
-            </li>
-
-            <li className="flex gap-3 items-center">
-              <IonIcon icon={mail} className="text-green-400 w-6 h-6" />
-              <Link href="mailto:contact@greencycle.com" className="hover:text-green-400">
-                contact@greencycle.com
-              </Link>
-            </li>
-
-          </ul>
-        </div>
       </div>
 
       {/* Footer Bottom */}
-      <div className="mt-14 pt-6 border-t border-green-900/50 text-center">
-        <p className="text-2xl text-gray-500">
-          &copy; 2024 GreenCycle • Built by <span className="text-green-400">Team Spam Byte</span>
+      <div className="mt-16 pt-6 border-t border-green-900/40 text-center">
+        <p className="text-lg text-gray-400 hover:text-gray-200 transition-colors">
+          &copy; 2024 GreenCycle • Built by{" "}
+          <span className="text-green-400 font-semibold hover:text-green-300 transition-colors">
+            Team Spam Byte
+          </span>
         </p>
 
-        <div className="mt-3 flex justify-center gap-4 text-xl text-gray-400">
-          <Link href="/privacypolicy" className="hover:text-green-400">
-            Privacy Policy
-          </Link>|
-          <Link href="/termsandservices" className="hover:text-green-400">
-            Terms of Service
-          </Link>
+        <div className="mt-3 flex justify-center gap-6 text-lg text-gray-400">
+          <Link href="/privacypolicy" className="hover:text-green-400 transition-colors">Privacy Policy</Link>
+          <span className="text-gray-500">|</span>
+          <Link href="/termsandservices" className="hover:text-green-400 transition-colors">Terms of Service</Link>
         </div>
       </div>
+
+      {/* Floating animation keyframes */}
+      <style jsx>{`
+        @keyframes floating {
+          0% { transform: translateY(0px); }
+          50% { transform: translateY(-15px); }
+          100% { transform: translateY(0px); }
+        }
+        .animate-floating {
+          animation: floating 6s ease-in-out infinite;
+        }
+        .animate-floating-delayed {
+          animation: floating 7s ease-in-out infinite 1.5s;
+        }
+      `}</style>
+
     </footer>
   );
 };
